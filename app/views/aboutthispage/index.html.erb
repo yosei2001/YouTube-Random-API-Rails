@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今やってるライブストリームをランダムで</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Judson" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<header>
+    <%= link_to youtube_main_path do %>
+        <%= image_tag 'RandomLiveIcon.png', class:"header-logo" %>
+    <% end %>
+    <div class="header-list">
+        <ul>
+            <li><%= link_to 'About this page', aboutthispage_index_path, {class: "header-listB"} %></li>
+            <li>|</li>
+            <li><%= link_to 'YouTube Guideline', 'https://www.youtube.com/howyoutubeworks/policies/community-guidelines/',{class: "header-listB"} %></li>
+        </ul>
+    </div>
+</header>
+
+<div class="main-container">
+<div class="title4">About this page</div>
+  <div class="textbox">
+            <div class="kuhaku"></div>
+    When you have a freetime, 
+            <div class="kuhaku"></div>
+    <br>
+    Rememver this Website!
+            <div class="kuhaku"></div>
+    <br>
+    You can watch YouTube livestreams
+            <div class="kuhaku"></div>
+    <br>
+    being broadcast from all over the world
+            <div class="kuhaku"></div>
+    <br>
+    whenever you want! 
+    <br>
+            <div class="kuhaku"></div>
+    <div class="bold but">BUT</div>
+            <div class="kuhaku"></div>
+    You CAN'T choose by yourself.
+            <div class="kuhaku"></div>
+    <br>
+    This Website suggest you a Random Livestream.
+            <div class="kuhaku"></div>
+    <br>
+            <div class="kuhaku"></div>
+    <div class="bold but">ENJOY!!</div>
+    <div class="verysmall"><br></div>
+    <div class="small">
+    If you want to know about YouTube Guideline.  Click <%= link_to 'here.', 'https://www.youtube.com/howyoutubeworks/policies/community-guidelines/',{class: "small red"} %>
+    </div>
+  </div>
+  <div class="chosei"></div>
+</div>
+
+
+<footer>
+Copyright © RandomLive All Rights Reserved.
+</footer>
+</body>
+</html>

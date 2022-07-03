@@ -1,0 +1,7 @@
+<div class ="kakunin">この下にフォームあります
+<%= form_for(@tweet, url: {controller: 'youtube', action: 'new' }) do |f| %>
+    <%= f.label :body %>
+    <%= f.text_field :body, :size => 140 %>
+    <%= f.submit "Tweetする" %>
+<% end %>
+</div>
