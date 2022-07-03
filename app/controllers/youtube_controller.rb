@@ -22,7 +22,7 @@ class YoutubeController < ApplicationController
 
         service.list_searches(:snippet, **opt)
       end
-      
+
       def index
 
         # tweet = Tweet.where('id >= ?', rand(Tweet.first.id..Tweet.last.id) ).select("body")
@@ -38,7 +38,7 @@ class YoutubeController < ApplicationController
     
       def create
         
-          tweet = Tweet.new(tweet_params)
+          @tweet = Tweet.new(tweet_params)
         if tweet.save  
           redirect_to :action => "new"
         else
