@@ -22,17 +22,7 @@ class YoutubeController < ApplicationController
 
         service.list_searches(:snippet, **opt)
       end
-    
-      def main
-        
-          suggest = Tweet.where('id >= ?', rand(Tweet.first.id..Tweet.last.id) ).first.body
-          #Tweetモデルからランダムにデータを複数取り出すコード
-          #そのうち1つ目を抽出するコード
-          
-          @youtube_data = find_videos( suggest )
-
-      end
-
+      
       def index
 
         # tweet = Tweet.where('id >= ?', rand(Tweet.first.id..Tweet.last.id) ).select("body")
@@ -56,6 +46,17 @@ class YoutubeController < ApplicationController
         end
       end
     
+      def main
+        
+          suggest = Tweet.where('id >= ?', rand(Tweet.first.id..Tweet.last.id) ).first.body
+          #Tweetモデルからランダムにデータを複数取り出すコード
+          #そのうち1つ目を抽出するコード
+          
+          @youtube_data = find_videos( suggest )
+
+      end
+
+
       private
       def tweet_params
         params.require(:tweet).permit(:body)
