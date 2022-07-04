@@ -25,10 +25,7 @@ class YoutubeController < ApplicationController
 
       def index
 
-        # tweet = Tweet.where('id >= ?', rand(Tweet.first.id..Tweet.last.id) ).select("body")
-        # @tweets = tweet.first(1)
         @tweets = Tweet.all
-
 
       end
   
@@ -47,12 +44,12 @@ class YoutubeController < ApplicationController
       end
     
       def main
-        
-          suggest = Tweet.where('id >= ?', rand(Tweet.first.id..Tweet.last.id) ).first.body
+          
+          # @suggest = Tweet.where('id >= ?', rand(Tweet.first.id..Tweet.last.id) ).first.body
           #Tweetモデルからランダムにデータを複数取り出すコード
           #そのうち1つ目を抽出するコード
           
-          @youtube_data = find_videos( suggest )
+          @youtube_data = find_videos( "配信" )
 
       end
 
