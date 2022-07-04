@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>今やってるライブストリームをランダムで</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Judson" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<header>
+    <%= link_to youtube_main_path do %>
+        <%= image_tag 'RandomLiveIcon.png', class:"header-logo" %>
+    <% end %>
+    <div class="header-list">
+        <ul>
+            <li><%= link_to 'About this page', aboutthispage_index_path, {class: "header-listB"} %></li>
+            <li>|</li>
+            <li><%= link_to 'YouTube Guideline', 'https://www.youtube.com/howyoutubeworks/policies/community-guidelines/',{class: "header-listB"} %></li>
+        </ul>
+    </div>
+</header>
+
+<div class="main-container">
+        <div class="title1">Meet New Live Stream</div>
+        <div class="title2">You can watch the live stream you've never seen!</div>
+    <div class="suggest-box">
+        <div class="chosei">
+            <% @youtube_data.items.each do |item| %>
+                <div class="youtube"><iframe width="560" height="315" src="https://www.youtube.com/embed/<%= item.id.video_id %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+            <% end %>
+        </div>
+    </div>
+        <%= button_to "Let's Go", {controller: 'youtube', action: 'main'}, {method: :get, class: "main-container-logo"} %>
+        <div class="title3">On this Website, you can watch the randam YouTube stream.</div>
+</div>
+
+<footer>
+Copyright © RandomLive All Rights Reserved.
+</footer>
+
+</body>
+</html>
+
+
