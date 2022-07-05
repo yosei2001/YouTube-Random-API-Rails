@@ -37,9 +37,9 @@ class YoutubeController < ApplicationController
         
           @tweet = Tweet.new(tweet_params)
         if tweet.save  
-          redirect_to :action => "new"
-        else
           redirect_to :action => "index"
+        else
+          redirect_to :action => "new"
         end
       end
     
