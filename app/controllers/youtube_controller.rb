@@ -47,8 +47,7 @@ class YoutubeController < ApplicationController
           
           
           
-          @suggest = Tweet.offset(rand(Tweet.count)).first.body
-          
+          @suggest = Tweet.offset(rand(Tweet.first.id..Tweet.last.id)).first.body
 
           @youtube_data = find_videos( @suggest )
 
