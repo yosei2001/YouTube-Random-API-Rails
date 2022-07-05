@@ -45,8 +45,6 @@ class YoutubeController < ApplicationController
     
       def main
 
-          # @suggest = Tweet.offset(rand(Tweet.find(1)..Tweet.find(5))).first.body  
-          # @suggest = Tweet.find(1).body
           array = Tweet.all
           random = array.shuffle[0..50]
           @suggest = random.first.body
