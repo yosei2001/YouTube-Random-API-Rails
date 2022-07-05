@@ -3,7 +3,7 @@ class YoutubeController < ApplicationController
     require 'google/apis/youtube_v3'
     require 'active_support/all'
   
-    GOOGLE_API_KEY =  ENV['youtube_api'] 
+    GOOGLE_API_KEY =  ENV['YOUTUBE_API'] 
 
   
       def find_videos(keyword, after: 1.months.ago, before: Time.now)
@@ -46,9 +46,10 @@ class YoutubeController < ApplicationController
       def main
           
           
-          # @suggest = Tweet.where('id >= ?', rand(Tweet.first.id..Tweet.last.id) ).first.body
+          @suggest = Tweet.where('id >= ?', rand(Tweet.first.id..Tweet.last.id) ).first.body
           # @suggest = Tweet.offset(rand(Tweet.count)).first.body
           
+
           @youtube_data = find_videos( "配信" )
 
       end
