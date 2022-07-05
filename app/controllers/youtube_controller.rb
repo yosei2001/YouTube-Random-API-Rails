@@ -46,7 +46,7 @@ class YoutubeController < ApplicationController
       def main
 
           array = Tweet.all
-          random = array.shuffle[0..50]
+          random = array.shuffle[0..100]
           @suggest = random.first.body
 
           @youtube_data = find_videos( @suggest )
