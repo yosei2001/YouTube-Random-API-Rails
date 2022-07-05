@@ -44,12 +44,10 @@ class YoutubeController < ApplicationController
       end
     
       def main
-          
-          
-          
-          @suggest = Tweet.offset(rand(Tweet.first.id..Tweet.last.id)).first.body
 
-          @youtube_data = find_videos( @suggest )
+          # @suggest = Tweet.offset(rand(Tweet.first.id..Tweet.last.id)).first.body  
+
+          @youtube_data = find_videos( "配信" )
 
       end
 
