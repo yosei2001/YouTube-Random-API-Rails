@@ -569,6 +569,13 @@ footer{
         line-height: 20px;
     }
 
+    .header-logo{
+        float:left;
+        height:100%;
+        width:120px;
+        opacity:1;
+    }
+
     .title1{
         font-size:40px;
         padding-top:40px;
@@ -696,6 +703,13 @@ footer{
 
     header li{
         line-height: 20px;
+    }
+    
+    .header-logo{
+        float:left;
+        height:100%;
+        width:120px;
+        opacity:1;
     }
 
     .title1{
