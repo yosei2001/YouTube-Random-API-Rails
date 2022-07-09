@@ -571,22 +571,22 @@ footer{
 
     .title1{
         font-size:40px;
-        padding-top:10px;
+        padding-top:40px;
         letter-spacing:1px;
         /* 以下追加 */
-        padding-bottom:40px;
+        padding-bottom:70px;
     }
     
     .title2{
         font-size:25px;
-        margin-bottom:60px;
+        margin-bottom:70px;
     }
     
     .title3{
-        padding-top:30px;
+        padding-top:50px;
         font-size:15px;
         /* 以下追加 */
-        padding-bottom:40px;
+        padding-bottom:60px;
     }
     
     
@@ -639,7 +639,7 @@ footer{
     }
     
     .chosei{
-        padding:3%;
+        padding:6%;
     }
     .textbox{
         background-color:rgba(218, 214, 214, 0.4);
@@ -700,22 +700,22 @@ footer{
 
     .title1{
         font-size:30px;
-        padding-top:10px;
+        padding-top:50px;
         letter-spacing:1px;
         /* 以下追加 */
-        padding-bottom:50px;
+        padding-bottom:100px;
     }
     
     .title2{
         font-size:19px;
-        margin-bottom:40px;
+        margin-bottom:100px;
     }
     
     .title3{
-        padding-top:30px;
+        padding-top:60px;
         font-size:15px;
         /* 以下追加 */
-        padding-bottom:30px;
+        padding-bottom:100px;
     }
     
     
